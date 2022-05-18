@@ -1,0 +1,154 @@
+:root{
+    --dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --light: #eee;
+    --gray: #6b7280;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Koulen', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--dark);
+}
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+header h1{
+    font-size: 3.5rem;
+    font-weight: 300;
+    color:var(--light);
+    padding: 4rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+.menu{
+    display: inline;
+    margin: 0;
+    padding:0;
+    position: flex;
+    width: 100%;
+    background-color: var(--light);
+}
+.menu a{
+    display: block;
+    color: var(--darkest);
+    text-decoration: none;
+    float: left;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+.menu a:hover{
+color: var(--light);
+   background-color: var(--darkest);
+   transition: 0.4s;
+}
+#post-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#post-input{
+    flex:1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+#post-input::placeholder{
+    color:var(--gray);
+}
+#post-submit{
+    color:var(--light);
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#post-submit:hover{
+    opacity: 0.8;
+}
+#post-submit:active{
+    opacity: 0.6;
+}
+main{
+    flex:1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.post-list{
+    padding: 1rem;
+}
+.post-list h2{
+   font-size: 1.5rem;
+   font-weight: 300;
+   color: var(--gray);
+   margin-bottom: 1rem; 
+}
+#posts .post{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#posts .post .content{
+    flex: 1 1 0%;
+}
+#posts .post .content .text{
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#posts .post .content .text:not(:read-only){
+    color: var(--gray);
+}
+
+#posts .post .actions{
+    display: flex;
+    margin:0 -0.5rem;
+}
+.post .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.post .actions button:hover{
+    opacity: 0.8;
+}
+.post .actions button:active{
+    opacity: 0.6;
+}
+.post .actions .edit{
+    color: var(--light);
+}
+.post .actions .delete{
+    color: crimson;
+}
