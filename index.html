@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Community</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Mono:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Community example</h1>
-</body> 
+    <ul class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </ul>
+    <header>
+        <h1>Community Name</h1>
+        <form id="post-form">
+            <input type="text" 
+                id="post-input"
+                placeholder="What do you want to say?">
+             <input 
+             type="submit"
+             id="post-submit"
+             value="Post">
+        </form>
+    </header>
+    <main>
+        <section class="post-list">
+            <div id="posts"></div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
 </html>
